@@ -30,5 +30,11 @@ export class AppComponent {
     this.hero = this.currentHero;
     this.heroesWithTrackByCountReset = 0;
   }
+
+  getVal(): number { return 2; }
+
+  heroImageUrl = 'assets/images/hero.png';
+
+  isUnchanged =  true;
 }
 

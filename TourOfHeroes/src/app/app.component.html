@@ -52,3 +52,19 @@
   {{title}}
   <img src="{{heroImageUrl}}" style="height:30px">
 </h3>
+
+<!-- "The sum of 1 + 1 is 2" -->
+<p>The sum of 1 + 1 is {{1 + 1}}</p>
+
+<!-- "The sum of 1 + 1 is not 4" -->
+<p>The sum of 1 + 1 is not {{1 + 1 + getVal()}}</p>
+
+<a class="to-toc" href="#toc">top</a>
+
+<hr><h2 id="expression-context">Expression context</h2>
+
+<p>Component expression context ({{title}}, [hidden]="isUnchanged")</p>
+<div class="context">
+    {{title}}
+    <span [hidden]="isUnchanged">changed</span>
+  </div>
