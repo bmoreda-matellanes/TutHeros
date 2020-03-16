@@ -48,5 +48,6 @@ export class AppComponent {
     this.alert('Saved.' + evtMsg);
     if (event) { event.stopPropagation(); }
   }
+
 }
 
