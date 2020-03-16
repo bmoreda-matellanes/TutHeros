@@ -56,7 +56,7 @@
 <!-- "The sum of 1 + 1 is 2" -->
 <p>The sum of 1 + 1 is {{1 + 1}}</p>
 
-c "The sum of 1 + 1 is not 4" -->
+"The sum of 1 + 1 is not 4" 
 <p>The sum of 1 + 1 is not {{1 + 1 + getVal()}}</p>
 
 <a class="to-toc" href="#toc">top</a>
@@ -82,3 +82,14 @@ c "The sum of 1 + 1 is not 4" -->
   </div>
 
   <a class="to-toc" href="#toc">top</a>
+
+  <hr><h2 id="statement-context">Statement context</h2>
+  <p>Component statement context ( (click)="onSave() )
+  <div class="context">
+    <button (click)="deleteHero()">Delete hero</button>
+  </div>
+
+  <p>Template $event statement context</p>
+  <div class="context">
+    <button (click)="onSave($event)">Save</button>
+  </div>

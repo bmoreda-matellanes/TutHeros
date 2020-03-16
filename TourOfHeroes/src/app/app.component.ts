@@ -23,6 +23,8 @@ export class AppComponent {
    // trackBy change counting
    heroesWithTrackByCountReset = 0;
 
+   alert(msg?: string)      { window.alert(msg); }
+
    // updates with fresh set of cloned heroes
    resetHeroes() {
     this.heroes = Hero.heroes.map(hero => hero.clone());
@@ -36,5 +38,15 @@ export class AppComponent {
   heroImageUrl = 'assets/images/hero.png';
 
   isUnchanged =  true;
+
+  deleteHero(hero?: Hero) {
+    this.alert(`Delete ${hero ? hero.name : 'the hero'}.`);
+  }
+
+  onSave(event?: MouseEvent) {
+    const evtMsg = event ? ' Event target is ' + (event.target as HTMLElement).textContent : '';
+    this.alert('Saved.' + evtMsg);
+    if (event) { event.stopPropagation(); }
+  }
 }
 
