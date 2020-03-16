@@ -56,7 +56,7 @@
 <!-- "The sum of 1 + 1 is 2" -->
 <p>The sum of 1 + 1 is {{1 + 1}}</p>
 
-<!-- "The sum of 1 + 1 is not 4" -->
+c "The sum of 1 + 1 is not 4" -->
 <p>The sum of 1 + 1 is not {{1 + 1 + getVal()}}</p>
 
 <a class="to-toc" href="#toc">top</a>
@@ -68,3 +68,17 @@
     {{title}}
     <span [hidden]="isUnchanged">changed</span>
   </div>
+
+  <p>Template input variable expression context (let hero)</p>
+
+  <ng-template>
+    <div *ngFor="let hero of heroes">{{hero.name}}</div>
+  </ng-template>
+
+  <p>Template reference variable expression context (#heroInput)</p>
+  <div (keyup)="0" class="context">
+  Type something:
+  <input #heroInput>{{heroInput.value}} 
+  </div>
+
+  <a class="to-toc" href="#toc">top</a>
