@@ -49,5 +49,7 @@ export class AppComponent {
     if (event) { event.stopPropagation(); }
   }
 
+  onSubmit(data: any) {/* referenced but not used */}
+
 }
 

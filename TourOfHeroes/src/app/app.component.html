@@ -1,5 +1,5 @@
-<!-- <app-product-list></app-product-list> -->
-
+<app-product-list></app-product-list> 
+<!--
 <router-outlet></router-outlet>
 
 <a id="toc"></a>
@@ -43,7 +43,6 @@
 <a href="#enums">Enums</a><br>
 <a href="#svg-templates">SVG Templates</a><br>
 
-<!-- Interpolation and expressions -->
 <hr><h2 id="interpolation">Interpolation</h2>
 
 <p>My current hero is {{currentHero.name}}</p>
@@ -53,7 +52,6 @@
   <img src="{{heroImageUrl}}" style="height:30px">
 </h3>
 
-<!-- "The sum of 1 + 1 is 2" -->
 <p>The sum of 1 + 1 is {{1 + 1}}</p>
 
 "The sum of 1 + 1 is not 4" 
@@ -95,7 +93,12 @@
   </div>
 
   <p>Template input variable statement context (let hero)</p>
-  <!-- template hides the following; plenty of examples later -->
+ 
   <div class="context">
     <button *ngFor="let hero of heroes" (click)="deleteHero(hero)">{{hero.name}}</button>
   </div>
+  <p>Template reference variable statement context (#heroForm)</p>
+  <div class="context">
+    <form #heroForm (ngSubmit)="onSubmit(heroForm)">...</form>
+  </div>
+  -->
