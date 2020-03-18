@@ -9,6 +9,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { RouterModule } from '@angular/router';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { CartComponent } from './cart/cart.component';
+import {HttpClientModule} from '@angular/common/http';
+import { ShippingComponent } from './shipping/shipping.component';
 
 
 @NgModule({
@@ -18,15 +20,18 @@ import { CartComponent } from './cart/cart.component';
     ProductAlertsComponent,
     ProductDetailsComponent,
     TopBarComponent,
-    CartComponent
+    CartComponent,
+    ShippingComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     RouterModule.forRoot([
       {path:'productlist',component:ProductListComponent},
       {path:'products/:productId',component:ProductDetailsComponent},
-      {path:'cart',component:CartComponent}
+      {path:'cart',component:CartComponent},
+      {path:'shipping',component:ShippingComponent}
       ])
   ],
   providers: [],
