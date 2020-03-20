@@ -11,7 +11,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { CartComponent } from './cart/cart.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,6 +24,8 @@ import { ShippingComponent } from './shipping/shipping.component';
     ShippingComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,

@@ -4,3 +4,6 @@
     <span>{{shipping.type}}</span>
     <span>{{shipping.price | currency }}</span>
 </div>
+
+<!-- shippingCosts es un Observable ya que se obtiene por medio de getShippingPrices
+que, a su vez, tiene un metodo get sobre la propiedad http de la clase HttpClient -->
